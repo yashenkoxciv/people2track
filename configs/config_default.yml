@@ -1,2 +1,2 @@
 similarity_threshold: 0.5
-max_disappeared: 6
+max_disappeared: 1000
