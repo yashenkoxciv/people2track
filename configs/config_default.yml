@@ -1,10 +1,2 @@
 similarity_threshold: 0.5
-include_similarity_threshold: 0.35
-latest_threshold: 3.0 #4
-max_disappeared: 6.0 #12
-tracking_fps: 15
-emotion_time_threshold: 5.0
-
-output_file: output_default.avi
-face_dir: faces
-tracker_file: tracker.pkl
+max_disappeared: 6
