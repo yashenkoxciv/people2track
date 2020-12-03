@@ -49,7 +49,7 @@ def start_face2know(args, config, tracker):
     frame_id = -1
     while video.isOpened():
         frame_id += 1
-        print('\r', frame_id + 1, end='', flush=True)
+        print('\r', tracker, frame_id + 1, 'frames processed', end='', flush=True)
         do_have_next, frame_image = video.read()
         if not do_have_next:
             break

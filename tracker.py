@@ -19,6 +19,12 @@ class Trackable:
     def get_centroid(self):
         return np.mean(self.features, 0).reshape(-1, 128)
 
+    def __str__(self):
+        return '<Trackable {0:03d} contains {1} examples>'.format(self.identifier, len(self.features))
+
+    def __repr__(self):
+        return str(self)
+
 
 class CentroidTracker:
     def __init__(self, similarity_threshold, max_disappeared):
@@ -94,3 +100,9 @@ class CentroidTracker:
                 best_centroid = centroid[0]
                 best_trackable_id = trackable_id
         return best_trackable_id, best_distance, best_centroid
+
+    def __str__(self):
+        return f'<CentroidTracker size={len(self.trackables)}>'
+
+    def __repr__(self):
+        return str(self)
